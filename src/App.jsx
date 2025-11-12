@@ -4,6 +4,7 @@ import Header from './components/header/Header'
 import CategorySelector from './components/searchbar/CategorySelector'
 import Searchbar from './components/searchbar/Searchbar'
 import QuickChoiceList from './components/searchbar/QuickChoiceList'
+import FeaturedSlider from './components/slider/FeaturedSlider'
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
           <Searchbar/>
         </section>
         <QuickChoiceList/>
+        <FeaturedSlider/>
       </div>
     </>
   )
