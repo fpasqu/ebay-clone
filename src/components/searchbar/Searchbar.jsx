@@ -6,7 +6,7 @@ function Searchbar() {
             <input  type="text" placeholder="Cerca su eBay"/>
             <select> Tutte le categorie</select>
         </div>
-        <button className="searchButton">Cerca</button>
+        <span className="searchButton">Cerca</span>
         <a href="#" className='categorySelector'>Avanzata</a>
     </>
   )
