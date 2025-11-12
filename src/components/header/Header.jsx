@@ -13,7 +13,6 @@ function Header() {
                 <p>Vendi</p>
                 <p>Il mio eBay</p>
             </div>
-       
         </div>
     </>
   )
