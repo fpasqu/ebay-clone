@@ -113,6 +113,7 @@ table {
   z-index: 2;
   padding: .6rem;
   width: 65%;
+  margin-left: 1.5rem;
 }
 
 .searchbar input {
@@ -213,7 +214,7 @@ a.categorySelector {
   width: 100%;
   height: 300px;
   margin-top: 20px;
-  border-radius: 10px;
+  border-radius: 15px;
 }
 
 .mySwiperContainer{
@@ -253,10 +254,10 @@ span.swiper-pagination-bullet-active {
   position: absolute;
   top: 90% !important;
   color: black !important;
-  border-radius: 100%;
   width: 10px !important; 
   height: 10px !important;
   background-color: white !important;
+  border-radius: 100%;
   padding: 5px;
 }
 

@@ -13,28 +13,26 @@ function FeaturedSlider() {
                 cssMode={true}
                 navigation={true}
                 pagination={true}
-                mousewheel={true}
+                mousewheel={false}
                 keyboard={true}
                 autoplay={{
-                delay: 2500,
-                disableOnInteraction: false,
+                    delay: 2500,
+                    disableOnInteraction: false,
                 }}
                 loop={true}        
                 modules={[Autoplay, Navigation, Pagination, Mousewheel, Keyboard]}
-                className="mySwiper"
-                    >
+                className="mySwiper">
                 <SwiperSlide>
-                <img src="https://swiperjs.com/demos/images/nature-1.jpg" />
-                <p>Testo di esempio 1</p>
+                    <img src="https://swiperjs.com/demos/images/nature-1.jpg" />
                 </SwiperSlide>
                 <SwiperSlide>
-                <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
+                    <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
                 </SwiperSlide>
                 <SwiperSlide>
-                <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
+                    <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
                 </SwiperSlide>
                 <SwiperSlide>
-                <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
+                    <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
                 </SwiperSlide>
             </Swiper>
         </div>
