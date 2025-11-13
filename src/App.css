@@ -265,5 +265,6 @@ span.swiper-pagination-bullet-active {
   right: 20px !important;
 }
 .swiper-button-prev {
+  left: unset !important;
   right: 50px !important;
 }
