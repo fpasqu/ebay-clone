@@ -5,6 +5,8 @@ import CategorySelector from './components/searchbar/CategorySelector'
 import Searchbar from './components/searchbar/Searchbar'
 import QuickChoiceList from './components/searchbar/QuickChoiceList'
 import FeaturedSlider from './components/slider/FeaturedSlider'
+import Brands from './components/brands/Brands'
+import { slides, brands, brandCategories } from './data/mockedData.js'
 
 function App() {
   return (
@@ -16,7 +18,9 @@ function App() {
           <Searchbar/>
         </section>
         <QuickChoiceList/>
-        <FeaturedSlider/>
+        <FeaturedSlider slides={slides} />
+        <Brands heading="I brand più ricercati su eBay" brands={brands}/>
+        <Brands heading="Il marketplace delle passioni" brands={brandCategories}/>
       </div>
     </>
   )
