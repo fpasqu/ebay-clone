@@ -3,48 +3,135 @@
    License: none (public domain)
 */
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
 }
+
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
 }
+
 body {
-	line-height: 1;
+  line-height: 1;
 }
-ol, ul {
-	list-style: none;
+
+ol,
+ul {
+  list-style: none;
 }
-blockquote, q {
-	quotes: none;
+
+blockquote,
+q {
+  quotes: none;
 }
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
 }
+
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 
 /* End Reset */
@@ -197,6 +284,7 @@ a.categorySelector {
   border-top: 1px solid #ddd;
   padding: 10px;
 }
+
 .quickChoiceList li {
   display: inline-block;
   text-decoration: none;
@@ -217,7 +305,7 @@ a.categorySelector {
   border-radius: 15px;
 }
 
-.mySwiperContainer{
+.mySwiperContainer {
   border: 1px solid white;
   border-radius: 20px;
 }
@@ -254,7 +342,7 @@ span.swiper-pagination-bullet-active {
   position: absolute;
   top: 90% !important;
   color: black !important;
-  width: 10px !important; 
+  width: 10px !important;
   height: 10px !important;
   background-color: white !important;
   border-radius: 100%;
@@ -264,6 +352,7 @@ span.swiper-pagination-bullet-active {
 .swiper-button-next {
   right: 20px !important;
 }
+
 .swiper-button-prev {
   left: unset !important;
   right: 50px !important;
@@ -272,7 +361,8 @@ span.swiper-pagination-bullet-active {
 /* --- FeaturedSlider text overlay styles --- */
 
 .slide-content {
-  position: relative; /* allows absolute text overlay */
+  position: relative;
+  /* allows absolute text overlay */
   width: 100%;
   height: 100%;
   overflow: hidden;
@@ -363,26 +453,27 @@ span.swiper-pagination-bullet-active {
 }
 
 .brand-card span {
-    border-bottom: 2px solid #0000;
-    color: #191919;
-    font-size: .875rem;
-    font-weight: 700;
-    line-height: 1.25rem;
-    margin: 12px auto 0;
-    max-width: 164px;
-    padding-bottom: 5px;
-    position: relative;
-    text-align: center;
-    width: -moz-fit-content;
-    width: fit-content;
-    display: block;
-    margin-block-start: 1em;
-    margin-block-end: 1em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-    unicode-bidi: isolate;
-    font-family: "Market Sans", Helvetica, sans-serif;
+  border-bottom: 2px solid #0000;
+  color: #191919;
+  font-size: .875rem;
+  font-weight: 700;
+  line-height: 1.25rem;
+  margin: 12px auto 0;
+  max-width: 164px;
+  padding-bottom: 5px;
+  position: relative;
+  text-align: center;
+  width: -moz-fit-content;
+  width: fit-content;
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  unicode-bidi: isolate;
+  font-family: "Market Sans", Helvetica, sans-serif;
 }
+
 .return-section {
   color: white;
   background-color: #191919;
@@ -440,38 +531,150 @@ span.swiper-pagination-bullet-active {
   background: white;
   border-radius: 12px;
   padding: 16px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  /* Remove shadow from card */
+  box-shadow: none;
   height: 100%;
 }
 
 .product-img {
   width: 100%;
-  border-radius: 12px;
+  border-radius: 16px;
+  /* Increased from 12px to make it rounder */
   object-fit: contain;
   margin-bottom: 10px;
+  /* Add shadow only to image */
+  box-shadow: 0 1px 12px rgba(0, 0, 0, 0.15);
 }
 
 .product-title {
   font-size: 15px;
   margin-bottom: 4px;
+  font-family: "Market Sans", Helvetica, sans-serif;
 }
 
 .product-price {
   font-weight: bold;
   font-size: 17px;
+  font-family: "Market Sans", Helvetica, sans-serif;
 }
 
 .swiper-button-prev,
 .swiper-button-next {
-  color: #000;               /* arrow color */
+  color: #000;
+  /* arrow color */
   background: white;
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
 }
 
 .swiper-button-prev:after,
 .swiper-button-next:after {
   font-size: 16px;
+}
+
+.swiper-slide {
+  background: transparent;
+}
+
+.product-discounted-price,
+.product-price {
+  font-family: "Market Sans", Helvetica, sans-serif;
+}
+
+.product-price {
+  font-size: 12px;
+  color: #707070;
+  margin-left: 10px;
+  text-decoration: line-through;
+}
+
+.product-discounted-price {
+  font-size: 16px;
+  font-weight: bold;
+  color: #191919;
+}
+
+.promo-cell {
+  background-color: #191919;
+  color: white;
+  border-radius: 12px;
+  margin: 16px 16px 16px 0;
+  padding: 16px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-family: "Market Sans", Helvetica, sans-serif;
+  box-sizing: border-box;
+  text-align: left;
+  align-items: flex-start;
+}
+
+.promo-title {
+  font-size: 22px;
+  font-weight: bold;
+  line-height: 1.2;
+  margin-bottom: 8px;
+}
+
+.promo-description {
+  font-size: 14px;
+  line-height: 1.3;
+  opacity: 0.9;
+  margin-bottom: 16px;
+}
+
+.promo-button {
+  background-color: white;
+  color: #191919;
+  border: none;
+  border-radius: 24px;
+  padding: 10px 20px;
+  font-weight: bold;
+  font-size: 14px;
+  cursor: pointer;
+  width: fit-content;
+  transition: background-color 0.2s;
+}
+
+.promo-button:hover {
+  background-color: #f0f0f0;
+}
+
+/* Product Swiper Scrollbar - Visible only on hover */
+.swiper-scrollbar {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  height: 6px;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.swiper:hover .swiper-scrollbar {
+  opacity: 1;
+}
+
+.swiper-scrollbar-drag {
+  background-color: #000;
+  border-radius: 3px;
+}
+
+.promo-cell-light {
+  background-color: #f8f9fa;
+  color: #191919;
+  border: 1px solid #e0e0e0;
+}
+
+.promo-button-dark {
+  background-color: #191919;
+  color: white;
+}
+
+.promo-button-dark:hover {
+  background-color: #333;
+}
+
+img[alt="Uno scrigno pieno di classici"] {
+  border-radius: 16px;
 }
