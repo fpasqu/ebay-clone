@@ -322,3 +322,64 @@ span.swiper-pagination-bullet-active {
   border: none;
   cursor: pointer;
 }
+
+.brands-heading {
+  font-family: "Market Sans", Helvetica, sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 28px;
+  margin: 2rem
+}
+
+.brand-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 24px;
+  justify-items: center;
+  text-align: center;
+}
+
+.brand-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+}
+
+.brand-circle {
+  width: 160px;
+  height: 160px;
+  background: transparent;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.brand-circle img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.brand-card span {
+    border-bottom: 2px solid #0000;
+    color: #191919;
+    font-size: .875rem;
+    font-weight: 700;
+    line-height: 1.25rem;
+    margin: 12px auto 0;
+    max-width: 164px;
+    padding-bottom: 5px;
+    position: relative;
+    text-align: center;
+    width: -moz-fit-content;
+    width: fit-content;
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    unicode-bidi: isolate;
+    font-family: "Market Sans", Helvetica, sans-serif;
+}
