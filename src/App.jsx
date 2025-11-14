@@ -7,6 +7,8 @@ import QuickChoiceList from './components/searchbar/QuickChoiceList'
 import FeaturedSlider from './components/slider/FeaturedSlider'
 import Brands from './components/brands/Brands'
 import { slides, brands, brandCategories } from './data/mockedData.js'
+import ReturnSection from './components/products/ReturnSection'
+import ProductSwiper from './components/products/ProductSwiper.jsx'
 
 function App() {
   return (
@@ -20,6 +22,8 @@ function App() {
         <QuickChoiceList/>
         <FeaturedSlider slides={slides} />
         <Brands heading="I brand più ricercati su eBay" brands={brands}/>
+        <ReturnSection />
+        <ProductSwiper products={brands} />
         <Brands heading="Il marketplace delle passioni" brands={brandCategories}/>
       </div>
     </>
