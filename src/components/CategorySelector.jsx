@@ -3,9 +3,9 @@ function CategorySelector() {
   return (
     <>
       <img src="src/assets/icons/ebay-logo.png" alt="ebay-logo" />
-      <div className='categorySelector'>
+      <div className='category-selector'>
         <span>Scegli la <br />categoria</span>
-        <button>v</button>
+        <img src="src/assets/icons/down-arrow.png" alt="arrow-down" />
       </div>
     </>
   )

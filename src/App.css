@@ -1,170 +1,95 @@
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
+/* ==========================================================================
+   CSS Reset - Meyerweb Reset v2.0
+   ========================================================================== */
 
-html,
-body,
-div,
-span,
-applet,
-object,
-iframe,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-pre,
-a,
-abbr,
-acronym,
-address,
-big,
-cite,
-code,
-del,
-dfn,
-em,
-img,
-ins,
-kbd,
-q,
-s,
-samp,
-small,
-strike,
-strong,
-sub,
-sup,
-tt,
-var,
-b,
-u,
-i,
-center,
-dl,
-dt,
-dd,
-ol,
-ul,
-li,
-fieldset,
-form,
-label,
-legend,
-table,
-caption,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-td,
-article,
-aside,
-canvas,
-details,
-embed,
-figure,
-figcaption,
-footer,
-header,
-hgroup,
-menu,
-nav,
-output,
-ruby,
-section,
-summary,
-time,
-mark,
-audio,
-video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline;
+/* Reset all elements to consistent baseline */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
 }
 
-/* HTML5 display-role reset for older browsers */
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-menu,
-nav,
-section {
-  display: block;
+/* HTML5 element display reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
 }
 
 body {
-  line-height: 1;
+	line-height: 1;
 }
 
-ol,
-ul {
-  list-style: none;
+ol, ul {
+	list-style: none;
 }
 
-blockquote,
-q {
-  quotes: none;
+blockquote, q {
+	quotes: none;
 }
 
-blockquote:before,
-blockquote:after,
-q:before,
-q:after {
-  content: '';
-  content: none;
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
 }
 
 table {
-  border-collapse: collapse;
-  border-spacing: 0;
+	border-collapse: collapse;
+	border-spacing: 0;
 }
 
-/* End Reset */
+/* ==========================================================================
+   Typography Styles
+   ========================================================================== */
 
-/* Common text styling */
 .header p,
-.categorySelector,
-.quickChoiceList,
-.quickChoiceList a,
-.searchButton {
+.category-selector,
+.quick-choice-list,
+.quick-choice-list a,
+.search-button {
   font-family: "Market Sans", Helvetica, sans-serif;
   font-size: 12px;
 }
 
-/* Common flex containers */
+/* ==========================================================================
+   Layout & Flexbox Utilities
+   ========================================================================== */
+
 .header,
-.headerRight,
-.headerLeft,
-.wrapperSection,
-.categorySelector,
+.header-right,
+.header-left,
+.wrapper-section,
+.category-selector,
 .searchbar,
-.searchButton {
+.search-button {
   display: flex;
   align-items: center;
 }
 
-/* Common layout containers */
-.pageContainer,
-.wrapperSection {
+.page-container,
+.wrapper-section {
   width: 100%;
 }
 
-/* Header */
+/* ==========================================================================
+   Header Styles
+   ========================================================================== */
+
 .header {
   justify-content: space-between;
   gap: 1rem;
@@ -180,27 +105,48 @@ table {
   padding: 5px;
 }
 
-/* Header sides */
-.headerRight {
+.header-right {
   gap: 1rem;
   justify-content: flex-end;
 }
 
-.headerLeft {
+.header-left {
   gap: 1rem;
   justify-content: flex-start;
 }
 
-/* Searchbar */
+.header img {
+  height: 1.2rem;
+  cursor: pointer;
+}
+
+.header .arrow-element {
+  display: flex;
+  align-items: center;
+}
+
+.header .arrow-element img {
+  height: 12px;
+}
+
+.category-selector img {
+  height: 12px;
+  cursor: pointer;
+}
+
+/* ==========================================================================
+   Search Bar Components
+   ========================================================================== */
+
 .searchbar {
   border: 2.5px solid #191919;
   border-radius: 2.75rem;
   overflow: hidden;
   transition: border .2s ease-in-out;
   z-index: 2;
-  padding: .6rem;
   width: 65%;
   margin-left: 1.5rem;
+  text-decoration: none;
 }
 
 .searchbar input {
@@ -212,13 +158,18 @@ table {
   font-size: 1rem;
   height: 100%;
   overflow: hidden;
+  padding: 0.6rem;
   padding-left: 2.75rem;
   transition: background-color .2s linear;
   width: 100%;
 }
 
-/* Category selector */
-.categorySelector {
+.searchbar-input:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.category-selector {
   color: #707070;
   flex-shrink: 10;
   font-size: .75rem;
@@ -230,30 +181,15 @@ table {
   text-decoration: none;
 }
 
-.categorySelector img {
+.category-selector img {
   display: inline-block;
 }
 
-a.categorySelector {
+a.category-selector {
   text-decoration: none;
 }
 
-/* Page wrapper */
-.wrapperSection {
-  padding: .75rem 0;
-}
-
-.pageContainer {
-  box-sizing: border-box;
-  display: block;
-  margin: 0 auto;
-  max-width: 1584px;
-  padding: 0 48px;
-  position: relative;
-}
-
-/* Search button */
-.searchButton {
+.search-button {
   justify-content: center;
   border-radius: 2rem;
   background-color: #0968f6;
@@ -268,8 +204,80 @@ a.categorySelector {
   margin: 0 1rem;
 }
 
-/* Quick choice list */
-.quickChoiceList {
+.searchbar-select-container {
+  display: flex;
+  align-items: center;
+  padding: 0 12px;
+  border-left: 1px solid #ccc;
+}
+
+.searchbar-select {
+  border: none;
+  font-size: 12px;
+  font-family: "Market Sans", Helvetica, sans-serif;
+  background: transparent;
+  outline: none;
+  cursor: pointer;
+  appearance: none;
+  padding-right: 18px;
+  color: #6d6d6d;
+  max-width: 110px;
+}
+
+.searchbar-select-container {
+  position: relative;
+}
+
+.searchbar-select-container::after {
+  content: "";
+  position: absolute;
+  right: 12px;
+  width: 12px;
+  height: 12px;
+  background-image: url('assets/icons/down-arrow.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  pointer-events: none;
+}
+
+.search-icon {
+  margin-left: 1rem;
+  width: 16px;
+  height: 16px;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.searchbar-input {
+  flex: 1;
+  border: none;
+  outline: none;
+  padding-left: 16px !important;
+}
+
+/* ==========================================================================
+   Main Page Layout
+   ========================================================================== */
+
+.page-container {
+  box-sizing: border-box;
+  display: block;
+  margin: 0 auto;
+  max-width: 1584px;
+  padding: 0 48px;
+  position: relative;
+}
+
+.wrapper-section {
+  padding: .75rem 0;
+}
+
+/* ==========================================================================
+   Quick Choice Navigation
+   ========================================================================== */
+
+.quick-choice-list {
   position: relative;
   display: block;
   white-space: normal;
@@ -285,27 +293,30 @@ a.categorySelector {
   padding: 10px;
 }
 
-.quickChoiceList li {
+.quick-choice-list li {
   display: inline-block;
   text-decoration: none;
   color: #707070;
   margin: 0 10px;
 }
 
-
-.quickChoiceList a {
+.quick-choice-list a {
   text-decoration: none;
   color: #707070;
 }
 
-.mySwiper {
+/* ==========================================================================
+   Swiper Carousel Styles
+   ========================================================================== */
+
+.my-swiper {
   width: 99%;
   height: 360px;
   margin-top: 20px;
   border-radius: 15px;
 }
 
-.mySwiperContainer {
+.my-swiper-container {
   border: 1px solid white;
   border-radius: 20px;
 }
@@ -313,11 +324,12 @@ a.categorySelector {
 .swiper-slide {
   text-align: center;
   font-size: 18px;
-  background: #444;
-  /* Slide text */
+  /*background: #444;*/
+  background: transparent;
   display: flex;
   justify-content: center;
   align-items: center;
+
 }
 
 .swiper-slide img {
@@ -334,7 +346,7 @@ span.swiper-pagination-bullet {
 }
 
 span.swiper-pagination-bullet-active {
-  background-color: white
+  background-color: white;
 }
 
 .swiper-button-next,
@@ -358,11 +370,43 @@ span.swiper-pagination-bullet-active {
   right: 50px !important;
 }
 
-/* --- FeaturedSlider text overlay styles --- */
+.swiper-button-prev,
+.swiper-button-next {
+  color: #000;
+  background: white;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.swiper-button-prev:after,
+.swiper-button-next:after {
+  font-size: 16px;
+}
+
+.swiper-scrollbar {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  height: 6px;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.swiper:hover .swiper-scrollbar {
+  opacity: 1;
+}
+
+.swiper-scrollbar-drag {
+  background-color: #000;
+  border-radius: 3px;
+}
+
+/* ==========================================================================
+   Slide Content Styles
+   ========================================================================== */
 
 .slide-content {
   position: relative;
-  /* allows absolute text overlay */
   width: 100%;
   height: 100%;
   overflow: hidden;
@@ -375,7 +419,6 @@ span.swiper-pagination-bullet-active {
   display: block;
 }
 
-/* Text box on top of image */
 .slide-text {
   position: absolute;
   top: 20%;
@@ -413,12 +456,16 @@ span.swiper-pagination-bullet-active {
   cursor: pointer;
 }
 
+/* ==========================================================================
+   Brands Section Styles
+   ========================================================================== */
+
 .brands-heading {
   font-family: "Market Sans", Helvetica, sans-serif;
   font-size: 22px;
   font-weight: 700;
   line-height: 28px;
-  margin: 2rem
+  margin: 2rem;
 }
 
 .brand-grid {
@@ -474,6 +521,10 @@ span.swiper-pagination-bullet-active {
   font-family: "Market Sans", Helvetica, sans-serif;
 }
 
+/* ==========================================================================
+   Return Policy Section
+   ========================================================================== */
+
 .return-section {
   color: white;
   background-color: #191919;
@@ -527,11 +578,14 @@ span.swiper-pagination-bullet-active {
   background-color: #f0f0f0;
 }
 
+/* ==========================================================================
+   Product Card Styles
+   ========================================================================== */
+
 .product-card {
   background: white;
   border-radius: 12px;
   padding: 16px;
-  /* Remove shadow from card */
   box-shadow: none;
   height: 100%;
 }
@@ -539,10 +593,8 @@ span.swiper-pagination-bullet-active {
 .product-img {
   width: 100%;
   border-radius: 16px;
-  /* Increased from 12px to make it rounder */
   object-fit: contain;
   margin-bottom: 10px;
-  /* Add shadow only to image */
   box-shadow: 0 1px 12px rgba(0, 0, 0, 0.15);
 }
 
@@ -556,26 +608,6 @@ span.swiper-pagination-bullet-active {
   font-weight: bold;
   font-size: 17px;
   font-family: "Market Sans", Helvetica, sans-serif;
-}
-
-.swiper-button-prev,
-.swiper-button-next {
-  color: #000;
-  /* arrow color */
-  background: white;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
-}
-
-.swiper-button-prev:after,
-.swiper-button-next:after {
-  font-size: 16px;
-}
-
-.swiper-slide {
-  background: transparent;
 }
 
 .product-discounted-price,
@@ -643,23 +675,6 @@ span.swiper-pagination-bullet-active {
   background-color: #f0f0f0;
 }
 
-/* Product Swiper Scrollbar - Visible only on hover */
-.swiper-scrollbar {
-  opacity: 0;
-  transition: opacity 0.3s ease;
-  height: 6px;
-  background-color: rgba(0, 0, 0, 0.1);
-}
-
-.swiper:hover .swiper-scrollbar {
-  opacity: 1;
-}
-
-.swiper-scrollbar-drag {
-  background-color: #000;
-  border-radius: 3px;
-}
-
 .promo-cell-light {
   background-color: #f8f9fa;
   color: #191919;
@@ -675,6 +690,17 @@ span.swiper-pagination-bullet-active {
   background-color: #333;
 }
 
-img[alt="Uno scrigno pieno di classici"] {
+/* ==========================================================================
+   Bottom Section & Miscellaneous
+   ========================================================================== */
+
+.bottom-section {
+  height: 360px;
+  margin-bottom: 2rem;
+}
+
+.bottom-section img {
   border-radius: 16px;
 }
+
+/* style.background='#570303'; style.color='#FF5C5C'; style['border-color']='#570303'; */

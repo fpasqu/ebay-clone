@@ -4,49 +4,53 @@ export const slides = [
     textColor: "#002B20",
     title: "Non aspettare Natale per i regali",
     description: "Acquistali ora e risparmia con i coupon fino al 10%",
-    buttonText: "Acquista ora"
+    buttonText: "Acquista ora",
+    buttonTextColor: "#1ED49E"
   },
   {
     imageSrc: "src/assets/images/slide2.png",
     textColor: "#553B06",
     title: "Scopri le Weekly Auctions in corso",
     description: "Aggiudicati tantissime carte rare da professionisti del settore.",
-    buttonText: "Vai alle aste"
+    buttonText: "Vai alle aste",
+    buttonTextColor: "#FFBD14"
   },
   {
     imageSrc: "src/assets/images/slide3.png",
     textColor: "#191919",
     title: "Solo il prezzo li tradisce",
     description: "Risparmia fino a -40%: tantissimi brand e tutti garantiti!",
-    buttonText: "Acquista ora"
+    buttonText: "Acquista ora",
+    buttonTextColor: "#F7F7F7"
   },
   {
     imageSrc: "src/assets/images/slide4.png",
     textColor: "#FFFFFF",
     title: "Servizio clienti eBay",
     description: "Dalla spedizione ai resi, se hai dubbi, siamo qui per aiutarti.",
-    buttonText: "Scopri come"
+    buttonText: "Scopri come",
+    buttonTextColor: "#000000"
   }
 ];
 
 export const brands = [
-  { name: "Apple", logo: "src/assets/icons/apple-logo.jpg" },
-  { name: "Dyson", logo: "src/assets/icons/dyson-logo.jpg" },
-  { name: "Samsung", logo: "src/assets/icons/samsung-logo.jpg" },
-  { name: "Nintendo", logo: "src/assets/icons/nintendo-logo.jpg" },
-  { name: "Pokémon", logo: "src/assets/icons/pokemon-logo.jpg" },
-  { name: "PlayStation", logo: "src/assets/icons/playstation-logo.jpg" },
-  { name: "Lego", logo: "src/assets/icons/lego-logo.jpg" }
+  { name: "Apple", logo: "src/assets/images/apple-logo.jpg" },
+  { name: "Dyson", logo: "src/assets/images/dyson-logo.jpg" },
+  { name: "Samsung", logo: "src/assets/images/samsung-logo.jpg" },
+  { name: "Nintendo", logo: "src/assets/images/nintendo-logo.jpg" },
+  { name: "Pokémon", logo: "src/assets/images/pokemon-logo.jpg" },
+  { name: "PlayStation", logo: "src/assets/images/playstation-logo.jpg" },
+  { name: "Lego", logo: "src/assets/images/lego-logo.jpg" }
 ];
 
 export const brandCategories = [
-  { name: "Motori", logo: "src/assets/icons/motori.jpeg" },
-  { name: "Collezionismo e passioni", logo: "src/assets/icons/collezionismo-e-passioni.jpeg" },
-  { name: "Ricondizionato", logo: "src/assets/icons/ricondizionato.jpeg" },
-  { name: "Elettronica", logo: "src/assets/icons/elettronica.jpeg" },
-  { name: "Elettrodomestici", logo: "src/assets/icons/elettrodomestici.jpeg" },
-  { name: "Casa e giardino", logo: "src/assets/icons/casa-e-giardino.jpeg" },
-  { name: "Moda e bellezza", logo: "src/assets/icons/moda-e-bellezza.jpeg" }
+  { name: "Motori", logo: "src/assets/images/motori.jpeg" },
+  { name: "Collezionismo e passioni", logo: "src/assets/images/collezionismo-e-passioni.jpeg" },
+  { name: "Ricondizionato", logo: "src/assets/images/ricondizionato.jpeg" },
+  { name: "Elettronica", logo: "src/assets/images/elettronica.jpeg" },
+  { name: "Elettrodomestici", logo: "src/assets/images/elettrodomestici.jpeg" },
+  { name: "Casa e giardino", logo: "src/assets/images/casa-e-giardino.jpeg" },
+  { name: "Moda e bellezza", logo: "src/assets/images/moda-e-bellezza.jpeg" }
 ];
 
 export const products = [
@@ -156,5 +160,56 @@ export const bottomSection = {
   textColor: "#562501",
   title: "Uno scrigno pieno di classici",
   description: "Trova pezzi rari per la tua collezione.",
-  buttonText: "Scopri tutto"
+  buttonText: "Scopri tutto",
+  buttonTextColor: "#FF8806"
 };
+
+export const quickChoices = [
+  { label: "Salvato", link: "#" },
+  { label: "Elettronica", link: "#" },
+  { label: "Gaming", link: "#" },
+  { label: "Elettrodomestici", link: "#" },
+  { label: "Casa e Giardino", link: "#" },
+  { label: "Fai da te", link: "#" },
+  { label: "Collezionismo", link: "#" },
+  { label: "Moda", link: "#" },
+  { label: "Sport", link: "#" },
+  { label: "Motori", link: "#" },
+  { label: "Ricondizionato", link: "#" },
+  { label: "Aste di beneficenza", link: "#" }
+];
+
+export const searchCategories = [
+  "Tutte le categorie",
+  "Abbigliamento e accessori",
+  "Arte e antiquariato",
+  "Auto, moto e altri veicoli",
+  "Bellezza e salute",
+  "Biglietti ed eventi",
+  "Casa, arredamento e bricolage",
+  "Collezionismo",
+  "Commercio, ufficio e industria",
+  "Elettrodomestici",
+  "Film e DVD",
+  "Fotografia e video",
+  "Francobolli",
+  "Fumetti",
+  "Giardino e arredamento esterni",
+  "Giocattoli e modellismo",
+  "Hobby creativi",
+  "Infanzia e premaman",
+  "Informatica",
+  "Libri e riviste",
+  "Monete e banconote",
+  "Musica, CD e vinili",
+  "Nautica e imbarcazioni",
+  "Orologi e gioielli",
+  "Sport e viaggi",
+  "Strumenti musicali",
+  "Telefonia fissa e mobile",
+  "TV, audio e video",
+  "Veicoli: ricambi e accessori",
+  "Videogiochi e console",
+  "Vini, caffè e gastronomia",
+  "Altre categorie"
+];

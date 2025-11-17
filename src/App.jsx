@@ -1,26 +1,22 @@
 import { useState } from 'react'
 import './App.css'
-import Header from './components/header/Header'
-import CategorySelector from './components/searchbar/CategorySelector'
-import Searchbar from './components/searchbar/Searchbar'
-import QuickChoiceList from './components/searchbar/QuickChoiceList'
-import FeaturedSlider from './components/slider/FeaturedSlider'
-import Brands from './components/brands/Brands'
-import { slides, brands, brandCategories, products, smartphones, bottomSection } from './data/mockedData.js'
-import ReturnSection from './components/products/ReturnSection'
-import ProductSwiper from './components/products/ProductSwiper'
-import SlideContent from './components/slider/SlideContent.jsx'
+import {
+  Header, CategorySelector, Searchbar, QuickChoiceList, FeaturedSlider,
+  Brands, ReturnSection, ProductSwiper, SlideContent
+} from './components'
+import { quickChoices, searchCategories, slides, brands, brandCategories, products, smartphones, bottomSection } from './utils/mockedData.js'
+
 
 function App() {
   return (
     <>
-      <div className="pageContainer">
+      <div className="page-container">
         <Header />
-        <section className='wrapperSection'>
-          <CategorySelector />
-          <Searchbar />
+        <section className='wrapper-section'>
+          <CategorySelector quickChoices={quickChoices} />
+          <Searchbar searchCategories={searchCategories} />
         </section>
-        <QuickChoiceList />
+        <QuickChoiceList quickChoices={quickChoices} />
         <FeaturedSlider slides={slides} />
         <Brands heading="I brand più ricercati su eBay" brands={brands} />
         <ReturnSection />
@@ -39,13 +35,16 @@ function App() {
             variant: "light",
           }} />
         <Brands heading="Il marketplace delle passioni" brands={brandCategories} />
-        <SlideContent
-          imageSrc={bottomSection.imageSrc}
-          textColor={bottomSection.textColor}
-          title={bottomSection.title}
-          description={bottomSection.description}
-          buttonText={bottomSection.buttonText}
-        />
+        <div className='bottom-section'>
+          <SlideContent
+            imageSrc={bottomSection.imageSrc}
+            textColor={bottomSection.textColor}
+            title={bottomSection.title}
+            description={bottomSection.description}
+            buttonText={bottomSection.buttonText}
+            buttonTextColor={bottomSection.buttonTextColor}
+          />
+        </div>
       </div>
     </>
   )

@@ -9,7 +9,7 @@ import SlideContent from './SlideContent';
 function FeaturedSlider({ slides }) {
     return (
         <>
-            <div className='mySwiperContainer'>
+            <div className='my-swiper-container'>
                 <Swiper
                     cssMode={true}
                     navigation={true}
@@ -21,7 +21,7 @@ function FeaturedSlider({ slides }) {
                     }}
                     loop={true}
                     modules={[Autoplay, Navigation, Pagination, Keyboard]}
-                    className="mySwiper">
+                    className="my-swiper">
                     {slides.map((slide, index) => (
                         <SwiperSlide key={index}>
                             <SlideContent
@@ -30,6 +30,7 @@ function FeaturedSlider({ slides }) {
                                 title={slide.title}
                                 description={slide.description}
                                 buttonText={slide.buttonText}
+                                buttonTextColor={slide.buttonTextColor}
                             />
                         </SwiperSlide>
                     ))}
