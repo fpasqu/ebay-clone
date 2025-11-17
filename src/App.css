@@ -282,7 +282,7 @@ a.category-selector {
   display: block;
   white-space: normal;
   list-style-type: disc;
-  margin: 1em 0;
+  margin-bottom: 1em;
   padding-inline-start: 40px;
   unicode-bidi: isolate;
   color: #555;
@@ -507,7 +507,6 @@ span.swiper-pagination-bullet-active {
   line-height: 1.25rem;
   margin: 12px auto 0;
   max-width: 164px;
-  padding-bottom: 5px;
   position: relative;
   text-align: center;
   width: -moz-fit-content;
@@ -519,6 +518,10 @@ span.swiper-pagination-bullet-active {
   margin-inline-end: 0px;
   unicode-bidi: isolate;
   font-family: "Market Sans", Helvetica, sans-serif;
+}
+
+.brand-card span:hover {
+  border-bottom: 2px solid #191919;
 }
 
 /* ==========================================================================
@@ -703,4 +706,206 @@ span.swiper-pagination-bullet-active {
   border-radius: 16px;
 }
 
-/* style.background='#570303'; style.color='#FF5C5C'; style['border-color']='#570303'; */
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+
+.custom-footer {
+  background-color: #f7f7f7;
+  border-top: 1px solid #e5e5e5;
+  padding: 30px 20px 20px;
+  font-family: Arial, sans-serif;
+  color: #333;
+  margin: 0 auto;
+  font-size: 12px;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.footer-main-columns {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  flex: 1;
+  margin-right: 40px;
+}
+
+.footer-side-columns {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  width: 200px;
+}
+
+.footer-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.column-title {
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: #000;
+}
+
+.column-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.list-item {
+  margin-bottom: 8px;
+  color: #555;
+  cursor: pointer;
+  transition: color 0.2s;
+  line-height: 1.4;
+}
+
+.list-item:hover {
+  color: #0070ba;
+  text-decoration: underline;
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  font-size: 11px;
+}
+
+.footer-copyright {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  max-width: 70%;
+}
+
+.copyright-text {
+  color: #666;
+}
+
+.legal-links {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.legal-links a {
+  color: #0070ba;
+  cursor: pointer;
+  transition: color 0.2s;
+  white-space: nowrap;
+  text-decoration: underline;
+}
+
+.legal-links a:hover {
+  color: #003b7a;
+  text-decoration: underline;
+}
+
+.ebay-sites {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.ebay-sites span {
+  font-size: 14px;
+  color: #555;
+}
+
+.country-selector {
+  position: relative;
+}
+
+.country-text {
+  font-size: 14px;
+  color: #0070ba;
+  padding: 5px 10px;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  background-color: white;
+}
+
+@media (max-width: 1024px) {
+  .footer-main-columns {
+    gap: 30px;
+    margin-right: 30px;
+  }
+  
+  .footer-side-columns {
+    width: 180px;
+  }
+  
+  .footer-copyright {
+    max-width: 60%;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+  }
+  
+  .footer-main-columns {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    margin-right: 0;
+    margin-bottom: 30px;
+  }
+  
+  .footer-side-columns {
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  
+  .footer-side-columns .footer-column {
+    width: 48%;
+  }
+  
+  .footer-bottom {
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .footer-copyright {
+    max-width: 100%;
+    order: 2;
+  }
+  
+  .ebay-sites {
+    order: 1;
+    align-self: flex-end;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-side-columns {
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .footer-side-columns .footer-column {
+    width: 100%;
+  }
+  
+  .legal-links {
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .legal-links span {
+    white-space: normal;
+  }
+  
+  .ebay-sites {
+    align-self: flex-start;
+  }
+}

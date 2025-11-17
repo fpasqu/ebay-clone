@@ -7,3 +7,4 @@ export { default as Brands } from './Brands';
 export { default as ReturnSection } from './ReturnSection';
 export { default as ProductSwiper } from './ProductSwiper';
 export { default as SlideContent } from './SlideContent';
+export { default as Footer } from './Footer';

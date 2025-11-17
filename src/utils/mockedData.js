@@ -213,3 +213,64 @@ export const searchCategories = [
   "Vini, caffè e gastronomia",
   "Altre categorie"
 ];
+
+export const footerLists = [
+  {
+    title: "Compra",
+    items: [
+      "Come fare acquisti",
+      "Acquisti per categoria",
+      "eBay Imperdibili",
+      "App eBay",
+      "I brand in vendita su eBay",
+      "Marche auto",
+      "Aste di beneficenza",
+      "Negozi Hub",
+      "eBay Extra"
+    ]
+  },
+  {
+    title: "Vendi su eBay",
+    items: [
+      "Spazio venditori",
+      "Tariffe venditori",
+      "Negozi",
+      "Centro spedizioni",
+      "Protezione venditori",
+      "Vendite internazionali",
+      "Novità per i venditori professionali",
+      "Strumenti di vendita"
+    ]
+  },
+  {
+    title: "A proposito di eBay",
+    items: [
+      "Informazioni Note legali",
+      "Mediazione",
+      "Ufficio stampa",
+      "Pubblicità su eBay",
+      "Affiliazione",
+      "Lavora in eBay",
+      "VeRO: Proprietà Intellettuale"
+    ]
+  },
+  {
+    title: "Aiuto e contatti",
+    items: [
+      "Spazio sicurezza",
+      "Garanzia cliente eBay"
+    ]
+  },
+  {
+    title: "Community",
+    items: [
+      "Facebook",
+      "YouTube",
+      "Instagram",
+      "Domande e risposte tra utenti",
+      "Forum",
+      "Gruppi",
+      "Bacheca Annunci"
+    ]
+  }
+];

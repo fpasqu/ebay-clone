@@ -2,9 +2,12 @@ import { useState } from 'react'
 import './App.css'
 import {
   Header, CategorySelector, Searchbar, QuickChoiceList, FeaturedSlider,
-  Brands, ReturnSection, ProductSwiper, SlideContent
+  Brands, ReturnSection, ProductSwiper, SlideContent, Footer
 } from './components'
-import { quickChoices, searchCategories, slides, brands, brandCategories, products, smartphones, bottomSection } from './utils/mockedData.js'
+import {
+  quickChoices, searchCategories, slides, brands, brandCategories,
+  products, smartphones, bottomSection, footerLists
+} from './utils/mockedData'
 
 
 function App() {
@@ -45,6 +48,7 @@ function App() {
             buttonTextColor={bottomSection.buttonTextColor}
           />
         </div>
+        <Footer lists={footerLists} />
       </div>
     </>
   )
