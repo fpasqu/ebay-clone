@@ -45,7 +45,7 @@ const Footer = ({ lists = [] }) => {
                             <a>Accessibilità</a>,
                             <a>Accordo per gli utenti</a>,
                             <a>Privacy</a>,
-                            <a>Condizioni di utilizzo dei servizi di pagamento</a>
+                            <a>Condizioni di utilizzo dei servizi di pagamento</a>,
                             <a>Cookie e AdChoice</a>
                         </div>
                     </div>
