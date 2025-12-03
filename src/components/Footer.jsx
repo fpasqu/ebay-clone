@@ -54,7 +54,12 @@ const Footer = ({ lists = [] }) => {
                 <div className="ebay-sites">
                     <span>Siti eBay</span>
                     <div className="country-selector">
-                        <span className="country-text">Italia</span>
+                        <span className="country-text">Italia
+                            <img
+                                src="/src/assets/icons/italy.png"
+                                alt="Italy Flag"
+                                className="country-flag" />
+                        </span>
                     </div>
                 </div>
             </div>

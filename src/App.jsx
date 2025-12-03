@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import './App.css'
 import {
-  Header, CategorySelector, Searchbar, QuickChoiceList, FeaturedSlider,
+  Header, Searchbar, QuickChoiceList, FeaturedSlider,
   Brands, ReturnSection, ProductSwiper, SlideContent, Footer
 } from './components'
 import {
@@ -15,10 +15,9 @@ function App() {
     <>
       <div className="page-container">
         <Header />
-        <section className='wrapper-section'>
-          <CategorySelector quickChoices={quickChoices} />
-          <Searchbar searchCategories={searchCategories} />
-        </section>
+      </div>
+      <Searchbar quickChoices={quickChoices} searchCategories={searchCategories} />
+      <div className="page-container">
         <QuickChoiceList quickChoices={quickChoices} />
         <FeaturedSlider slides={slides} />
         <Brands heading="I brand più ricercati su eBay" brands={brands} />
@@ -48,8 +47,8 @@ function App() {
             buttonTextColor={bottomSection.buttonTextColor}
           />
         </div>
-        <Footer lists={footerLists} />
       </div>
+      <Footer lists={footerLists} />
     </>
   )
 }

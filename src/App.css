@@ -73,7 +73,6 @@ table {
 .header,
 .header-right,
 .header-left,
-.wrapper-section,
 .category-selector,
 .searchbar,
 .search-button {
@@ -81,9 +80,34 @@ table {
   align-items: center;
 }
 
-.page-container,
-.wrapper-section {
+.page-container {
   width: 100%;
+  box-sizing: border-box;
+  display: block;
+  margin: 0 auto;
+  max-width: 1584px;
+  padding: 0 48px;
+  position: relative;
+}
+
+.wrapper-section {
+  display: flex;
+  align-items: center;
+  padding: .75rem 0;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  width: 100%;
+  box-sizing: border-box;
+  justify-content: center;
+}
+
+.wrapper-section > div {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 1584px;
+  padding: 0 48px;
+  box-sizing: border-box;
 }
 
 /* ==========================================================================
@@ -96,7 +120,6 @@ table {
   height: 2rem;
   position: relative;
   z-index: 4;
-  border-bottom: 1px solid #ddd;
   margin: 0;
   padding: 0;
 }
@@ -144,9 +167,10 @@ table {
   overflow: hidden;
   transition: border .2s ease-in-out;
   z-index: 2;
-  width: 65%;
-  margin-left: 1.5rem;
+  flex: 1;
+  margin: 0 1rem;
   text-decoration: none;
+  height: 44px;
 }
 
 .searchbar input {
@@ -169,39 +193,11 @@ table {
   box-shadow: none;
 }
 
-.category-selector {
-  color: #707070;
-  flex-shrink: 10;
-  font-size: .75rem;
-  height: 2.5rem;
-  line-height: .875rem;
-  min-width: 50px;
-  text-align: left;
-  margin: .5rem;
-  text-decoration: none;
-}
-
-.category-selector img {
-  display: inline-block;
-}
-
-a.category-selector {
-  text-decoration: none;
-}
-
-.search-button {
-  justify-content: center;
-  border-radius: 2rem;
-  background-color: #0968f6;
-  color: white;
-  cursor: pointer;
-  font-weight: bold;
-  font-size: 14px;
-  outline-offset: .5px;
-  padding: 1rem;
-  transition: background-color .2s ease-in-out;
-  width: 10%;
-  margin: 0 1rem;
+.searchbar-input {
+  flex: 1;
+  border: none;
+  outline: none;
+  padding-left: 16px !important;
 }
 
 .searchbar-select-container {
@@ -209,22 +205,6 @@ a.category-selector {
   align-items: center;
   padding: 0 12px;
   border-left: 1px solid #ccc;
-}
-
-.searchbar-select {
-  border: none;
-  font-size: 12px;
-  font-family: "Market Sans", Helvetica, sans-serif;
-  background: transparent;
-  outline: none;
-  cursor: pointer;
-  appearance: none;
-  padding-right: 18px;
-  color: #6d6d6d;
-  max-width: 110px;
-}
-
-.searchbar-select-container {
   position: relative;
 }
 
@@ -241,6 +221,19 @@ a.category-selector {
   pointer-events: none;
 }
 
+.searchbar-select {
+  border: none;
+  font-size: 12px;
+  font-family: "Market Sans", Helvetica, sans-serif;
+  background: transparent;
+  outline: none;
+  cursor: pointer;
+  appearance: none;
+  padding-right: 18px;
+  color: #6d6d6d;
+  max-width: 110px;
+}
+
 .search-icon {
   margin-left: 1rem;
   width: 16px;
@@ -249,28 +242,43 @@ a.category-selector {
   pointer-events: none;
 }
 
-.searchbar-input {
-  flex: 1;
-  border: none;
-  outline: none;
-  padding-left: 16px !important;
-}
-
 /* ==========================================================================
-   Main Page Layout
+   Search Bar Actions & Navigation
    ========================================================================== */
 
-.page-container {
-  box-sizing: border-box;
-  display: block;
-  margin: 0 auto;
-  max-width: 1584px;
-  padding: 0 48px;
-  position: relative;
+.search-button {
+  justify-content: center;
+  border-radius: 2rem;
+  background-color: #0968f6;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 14px;
+  outline-offset: .5px;
+  padding: 1rem;
+  transition: background-color .2s ease-in-out;
+  width: 80px;
+  margin-right: 1rem;
+  flex-shrink: 0;
 }
 
-.wrapper-section {
-  padding: .75rem 0;
+.category-selector {
+  color: #707070;
+  flex-shrink: 10;
+  font-size: .75rem;
+  height: 2.5rem;
+  line-height: .875rem;
+  min-width: 50px;
+  text-align: left;
+  margin: .5rem;
+  text-decoration: none;
+}
+
+a.category-selector {
+  text-decoration: none;
+  margin-left: auto;
+  margin-right: 0;
+  white-space: nowrap;
 }
 
 /* ==========================================================================
@@ -281,15 +289,10 @@ a.category-selector {
   position: relative;
   display: block;
   white-space: normal;
-  list-style-type: disc;
-  margin-bottom: 1em;
-  padding-inline-start: 40px;
-  unicode-bidi: isolate;
   color: #555;
   font-weight: 400;
   text-align: center;
   text-decoration: none;
-  border-top: 1px solid #ddd;
   padding: 10px;
 }
 
@@ -324,12 +327,10 @@ a.category-selector {
 .swiper-slide {
   text-align: center;
   font-size: 18px;
-  /*background: #444;*/
   background: transparent;
   display: flex;
   justify-content: center;
   align-items: center;
-
 }
 
 .swiper-slide img {
@@ -512,11 +513,6 @@ span.swiper-pagination-bullet-active {
   width: -moz-fit-content;
   width: fit-content;
   display: block;
-  margin-block-start: 1em;
-  margin-block-end: 1em;
-  margin-inline-start: 0px;
-  margin-inline-end: 0px;
-  unicode-bidi: isolate;
   font-family: "Market Sans", Helvetica, sans-serif;
 }
 
@@ -631,6 +627,10 @@ span.swiper-pagination-bullet-active {
   color: #191919;
 }
 
+/* ==========================================================================
+   Promotional Cells
+   ========================================================================== */
+
 .promo-cell {
   background-color: #191919;
   color: white;
@@ -707,13 +707,13 @@ span.swiper-pagination-bullet-active {
 }
 
 /* ==========================================================================
-   Footer
+   Footer Styles
    ========================================================================== */
 
 .custom-footer {
   background-color: #f7f7f7;
   border-top: 1px solid #e5e5e5;
-  padding: 30px 20px 20px;
+  padding: 30px 48px;
   font-family: Arial, sans-serif;
   color: #333;
   margin: 0 auto;
@@ -821,17 +821,29 @@ span.swiper-pagination-bullet-active {
 }
 
 .country-selector {
-  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 8px;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  background-color: white;
 }
 
 .country-text {
   font-size: 14px;
   color: #0070ba;
-  padding: 5px 10px;
-  border: 1px solid #ddd;
-  border-radius: 3px;
-  background-color: white;
 }
+
+.country-flag {
+  width: 18px;
+  height: 12px;
+  margin-left: 6px;
+}
+
+/* ==========================================================================
+   Media Queries
+   ========================================================================== */
 
 @media (max-width: 1024px) {
   .footer-main-columns {

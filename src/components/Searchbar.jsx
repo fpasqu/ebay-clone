@@ -1,33 +1,14 @@
-function Searchbar({ searchCategories }) {
+import CategorySelector from "./CategorySelector";
+import SearchbarInput from "./SearchbarInput";
+
+function Searchbar({ quickChoices, searchCategories }) {
   return (
-    <>
-      <div className="searchbar">
-        <img 
-            src="src/assets/icons/search.png" 
-            alt="Search" 
-            className="search-icon"
-          />
-        <input
-          className="searchbar-input"
-          type="text"
-          placeholder="Cerca su eBay"
-        />
-
-        <div className="searchbar-select-container">
-          <select className="searchbar-select">
-            {searchCategories.map((category, index) => (
-              <option key={index} value={category}>
-                {category}
-              </option>
-            ))}
-          </select>
-        </div>
-
+    <section className='wrapper-section'>
+      <div className="wrapper-section-content">
+        <CategorySelector quickChoices={quickChoices} />
+        <SearchbarInput searchCategories={searchCategories} />
       </div>
-
-      <span className="search-button">Cerca</span>
-      <a href="#" className="category-selector">Avanzata</a>
-    </>
+    </section>
   );
 }
 
