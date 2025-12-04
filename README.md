@@ -1,16 +1,68 @@
-# React + Vite
+<br/>
+<p align="center">
+  <a href="https://github.com/fpasqu/kp2comparator">
+    <img src="docs/logo.png" alt="Logo" width="80" height="80">
+  </a>
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+  <h3 align="center">ebay-clone</h3>
 
-Currently, two official plugins are available:
+  <p align="center">
+    Replica of eBay.it
+    <br/>
+    <br/>
+    <a href="https://github.com/fpasqu/ebay-clone/issues">Report Bug</a>
+    .
+    <a href="https://github.com/fpasqu/ebay-clone/issues">Request Feature</a>
+  </p>
+</p>
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+![Downloads](https://img.shields.io/github/downloads/fpasqu/ebay-clone/total.svg) ![Issues](https://img.shields.io/github/issues/fpasqu/ebay-clone) 
+![License](https://img.shields.io/github/license/fpasqu/ebay-clone) 
 
-## React Compiler
+## Table Of Contents
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- [Table Of Contents](#table-of-contents)
+- [About The Project](#about-the-project)
+- [Prerequisites](#prerequisites)
+- [Usage](#usage)
+- [License](#license)
+- [Authors](#authors)
 
-## Expanding the ESLint configuration
+## About The Project
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+This project is an eBay-style marketplace application built to showcase component-based architecture, state management, reusable UI patterns, and integration with mock backend services. The goal is to highlight my ability to build a functional, scalable, and user-friendly front-end application using modern React practices.
+
+## Prerequisites
+
+To run this project locally, you’ll need the following:
+- Node.js (version 18+ recommended)
+- npm or yarn (comes with Node.js, or install Yarn separately)
+  
+Once the installation is done, install the packages by running:
+```sh
+npm install
+```
+or
+```sh
+yarn
+```
+
+## Usage
+
+To run the website locally, launch with the following command:
+
+```sh
+npm run dev
+```
+
+After entering the command, the url and port of the website will be displayed
+
+![Screen Shot1](docs/screenshot_1.png)
+
+## License
+
+Distributed under the MIT License. See [LICENSE](https://github.com/fpasqu/kp2comparator/blob/main/LICENSE) for more information.
+
+## Authors
+
+* **Federico Pasquali** - *IT Consultant* - [fpasqu](https://github.com/fpasqu/)
